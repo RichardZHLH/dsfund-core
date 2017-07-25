@@ -1,0 +1,27 @@
+{
+  "name": "dsfund",
+  "description": "dsfund",
+  "author": "Richard",
+  "license": "GPL3",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhanglihua-wanglu/dsfund"
+  },
+  "homepage": "http://www.dsfund.info",
+  "keywords": [
+    "dsfund"
+  ],
+  "scripts": {
+    "start": "forever start -s service/server.js",
+    "stop": "forever stop service/server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+	"forever": "^0.15.3"
+  },
+  "engines": {
+    "node": ">=7.8",
+    "npm": ">=3.10"
+  }
+}

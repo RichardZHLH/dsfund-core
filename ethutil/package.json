@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "main": "ethutil.js",
   "dependencies": {
-    "ethereumjs-tx": "*",
-    "ethereumjs-util": "^5.1.2"
+    "crypto": "^1.0.1",
+    "ethereumjs-tx": "^1.3.3",
+    "ethereumjs-util": "^5.1.2",
+    "web3": "^0.20.1"
   }
 }

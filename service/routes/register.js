@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-let dbop = require('../dbutil');
+let dbop = require('../../dbutil');
+let eth = require('../../ethutil');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

@@ -1,13 +1,11 @@
 const DBTS = require("./tables.js");
-const cfg = require("../../cfg.js");
+const cfg = require("../config.js");
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
 let options = {
-  server: {
-    auto_reconnect: true,
-    poolSize: 5
-  }
+	useMongoClient:true,
+	poolSize: 5
 };
 mongoose.connect(cfg.mongooseURI, options);
 var db = mongoose.connection;

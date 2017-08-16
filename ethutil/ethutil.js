@@ -4,7 +4,8 @@
 var ethUtil = require('ethereumjs-util');
 ethUtil.crypto = require('crypto');
 const fs = require('fs');
-let ethURI="http://118.190.71.27:8145";
+const cfg = require('../config.js');
+let ethURI=cfg.ethURI;
 var Tx = require('ethereumjs-tx');
 var Web3 = require('web3');
 var web3 = new Web3(new Web3.providers.HttpProvider(ethURI));

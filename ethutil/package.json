@@ -1,0 +1,9 @@
+{
+  "name": "ethutil",
+  "version": "0.0.1",
+  "main": "ethutil.js",
+  "dependencies": {
+    "ethereumjs-tx": "*",
+    "ethereumjs-util": "^5.1.2"
+  }
+}

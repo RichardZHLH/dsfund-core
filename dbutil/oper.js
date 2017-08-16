@@ -25,5 +25,14 @@ function insertUser(user)
 				}
 			});
 }
+function handleuser(where, callback){
+	UserModel.find(where,  function(err, res){
+		if(err){
+			console.log(err);
+		}else{
+			callback(res);
+		}
+	});
+}
 exports.insertUser = insertUser;
 

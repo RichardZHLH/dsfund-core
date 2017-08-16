@@ -1,0 +1,8 @@
+{
+  "name": "dbutil",
+  "version": "0.0.1",
+  "main":"oper.js",
+  "dependencies": {
+    "mongoose": "^4.11.6"
+  }
+}

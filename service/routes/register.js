@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-let eth = require('../eth/util.js');
-let dbop = require('../db/oper.js');
+let dbop = require('../dbutil');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -14,8 +13,7 @@ router.get('/', function(req, res, next) {
 		console.log("new pubkey is "+keyPair.publicKey);
 		userAddr = keyPair.publicKey;
 	}
-	//eth.giveEtherTo(userAddr);
-	//eth.giveDstTo(userAddr);
+
 	let user = {"uAddr":userAddr};
 	dbop.insertUser(user);
 	res.render('register_info',{"uAddr":userAddr});

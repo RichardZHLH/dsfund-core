@@ -14,23 +14,19 @@ var UserModel = db.model("user", DBTS.UserSchema);
 
 
 
-function insertUser(user)
+function insertUser(user, callback)
 {
 	console.log(user);
 	UserModel.create(user, function(err,r){
-				if(err){
-					console.log("insertUser:" +err);
-				}
-			});
-}
-function handleuser(where, callback){
-	UserModel.find(where,  function(err, res){
-		if(err){
-			console.log(err);
-		}else{
-			callback(res);
-		}
+		callback(err,r);
 	});
 }
+function handleUser(where){
+	return UserModel.find(where).exec();
+}
+exports.closeDb = function(){
+	db.close();
+}
 exports.insertUser = insertUser;
+exports.handleUser = handleUser;
 

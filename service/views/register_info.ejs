@@ -6,7 +6,17 @@
     <meta charset="utf-8">
 </head>
 <body>
-Your Addr: <%= uAddr %>  <br>
+<% if (typeof(user)!= "undefined") { %>
+Your Addr: <%= user.uAddr %>  <br>
+<% if (typeof(user.uSK)!= "undefined") { %>
+Your SK: <%= user.uSK %>
+<% } %>
+<% } %>
+
+<% if (typeof(err) != "undefined") { %>
+Error: <%= err %>  
+<% } %>
+<br>
 <a href='/login'> login </a>
 </body>
 </head>

@@ -21,12 +21,10 @@ function insertUser(user, callback)
 		callback(err,r);
 	});
 }
-function handleUser(where){
-	return UserModel.find(where).exec();
-}
+
 exports.closeDb = function(){
 	db.close();
 }
+exports.UserModel = UserModel;
 exports.insertUser = insertUser;
-exports.handleUser = handleUser;
 

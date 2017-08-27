@@ -6,7 +6,10 @@ const eth = require("../ethutil");
 
 function checkDbUser(){
 	console.log("check db user");
-	dbop.handleUser({}).then(function(r){
+	dbop.UserModel.find({})
+	.limit(10)
+	.exec()
+	.then(function(r){
 		console.log(r);
 	}).then(function(){
 		dbop.closeDb();

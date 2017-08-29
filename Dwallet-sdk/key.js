@@ -1,4 +1,7 @@
 var ethUtil = require('ethereumjs-util');
+var ethKeys = require("ethereumjs-keys");
+
+
 ethUtil.crypto = require('crypto');
 
 exports.generateKeyPair = function() {
